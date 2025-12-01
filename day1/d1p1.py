@@ -8,12 +8,12 @@ times_at_zero = 0
 # Read in the input lines one by one and follow their instructions
 for line in input:
     direction = line[0]
-    count = line[1:]
+    count = int(line[1:])
 
     if direction == "L":
-        arrow = (arrow - int(count))%100
+        arrow = (arrow - count)%100
     else:
-        arrow = (arrow + int(count))%100
+        arrow = (arrow + count)%100
     
     if arrow == 0:
         times_at_zero += 1
