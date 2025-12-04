@@ -10,7 +10,7 @@ def space_contents(x, y):
     else:
         return "." # Out of bounds spaces are empty
 
-def adjascent_rolls(x, y):
+def adjacent_rolls(x, y):
     # Keep track of how many spaces around this roll contain other rolls
     adjascent_rolls = 0
 
@@ -28,7 +28,7 @@ movable_rolls = 0
 # Look at each space and count the surrounding rolls
 for y in range(len(input)):
     for x in range(len(input[y])):
-        if space_contents(x, y) == "@" and adjascent_rolls(x, y) < 4:
+        if space_contents(x, y) == "@" and adjacent_rolls(x, y) < 4:
             movable_rolls += 1
 
 # Print the result
