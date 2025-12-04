@@ -12,15 +12,15 @@ def space_contents(x, y):
 
 def adjacent_rolls(x, y):
     # Keep track of how many spaces around this roll contain other rolls
-    adjascent_rolls = 0
+    adjacent_rolls = 0
 
     # Check in each direction
     for (dx, dy) in directions:
         if space_contents(x+dx, y+dy) == "@":
-            adjascent_rolls += 1
+            adjacent_rolls += 1
     
     # Return the number of adjascent rolls
-    return adjascent_rolls
+    return adjacent_rolls
 
 # Count of movable rolls
 movable_rolls = 0
