@@ -29,10 +29,8 @@ for s in sums:
         n = int("".join([s[r][c-1] for r in range(rows-1)]))
         numbers.append(n)
     if s[rows-1][0] == "+":
-        # print(f"{numbers}\nsum: {sum(numbers)}")
         total += sum(numbers)
     else:
-        # print(f"{numbers}\nprod: {prod(numbers)}")
         total += prod(numbers)
 
 # Print the answer
